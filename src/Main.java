@@ -11,15 +11,21 @@ public class Main {
         }
         System.out.println(" ");
         System.out.println("Задание 4.3");
-        int carCapacity = 100;
-        if (carCapacity <= 60){
-            System.out.println("В вагоне есть сидячие места");
+        System.out.println("Вместимость одного вагона поезда составляет 102 человека. Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.");
+        int varCapacity = 150;
+        System.out.println("Если в вагон будут идти на посадку " + varCapacity + " человек, то ");
+        if (varCapacity <= 60){
+            System.out.println("В вагоне останутся сидячие места");
         }
-        else if (carCapacity <= 102){
-            System.out.println("В вагоне нет сидячих мест, есть стоячие места");
+        else if (varCapacity <= 102){
+            System.out.println("В вагоне не будет сидячих мест, но останутся стоячие места");
         }
         else {
-            System.out.println("В вагоне нет мест!");
+            System.out.println("В вагоне не будет мест!");
+            }
+        if (varCapacity > 102) {
+            int varCapacityCouldntFit = varCapacity - 102;
+            System.out.println("из которых " + varCapacityCouldntFit + " человек не поместится");
         }
     }
 }
